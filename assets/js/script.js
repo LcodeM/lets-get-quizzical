@@ -1,4 +1,6 @@
-/* Questions Array */
+/*
+* Determine Questions Array
+*/
 const questions = [
     {
         question: "What does Seoul, the South Korean capital, mean in the Korean language?",
@@ -92,17 +94,28 @@ const questions = [
     }
 ];
 
-/* Welcome screen functions */
+/**
+ * Determine elements and buttons
+ */
+const questionElement = document.getElementById("question");
+const answerButton = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+/* 
+* Welcome screen functions
+*/
 // Hide welcome screen on 'START' button click
 function hideWelcome() {
 
 }
 // Display welcome screen before game start and when Play Again clicked
 function displayWelcome() {
-
+    
 }
 
-/* Question screen functions */
+/* 
+* Question screen functions
+*/
 // Hide questions before quiz start and after quiz finished
 function hideQuestions() {
 
@@ -112,7 +125,9 @@ function showQuestions() {
 
 }
 
-/* Final Score screen functions */
+/*
+* Final Score screen functions
+*/
 // Hide the final score screen until quiz complete
 function hideFinalScore() {
 
