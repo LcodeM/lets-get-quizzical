@@ -15,8 +15,45 @@
     <header>
         <h1>Let's Get Quizzical!</h1>
     </header>
+    <!-- Welcome modal div -->
+    <div id="welcome-modal" class="container">
+        <div>
+            <h2>Welcome!</h2>
+            <p>Welcome to this general knowledge quiz.
+                Try your best to guess as many correct answers as possible.
+                Think carefully, because once you submit your answer, you won't be able to change it!
 
-    <section></section>
+                Good luck, and happy quizzing! 
+
+                Press 'START' to begin.
+            </p>
+            <button type="button" onclick="startQuiz()">START</button>
+        </div>
+    </div>
+    <!-- Game section -->
+    <section>
+        <div id="question-container" class="container">
+            <h3>Question </h3>
+            <button id="answer-button-one"></button>
+            <button id="answer-button-two"></button>
+            <button id="answer-button-three"></button>
+            <button id="answer-button-four"></button>
+            <button type="submit" id="submit-answer-btn" onclick=""></button>
+        </div>
+    </section>
+    <!-- Score section -->
+    <section>
+        <div id="score-display">
+            <h3>Score: </h3>
+        </div>
+    </section>
     <script src="assets/js/script.js"></script>
+    <footer>
+        <!-- Social links div -->
+        <div>
+            <!-- Author info -->
+            <h5>&copy; 2024 LcodeM</h5>
+        </div>
+    </footer>
 </body>
 </html>
