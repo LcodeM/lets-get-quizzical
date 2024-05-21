@@ -16,7 +16,7 @@
         <h1>Let's Get Quizzical!</h1>
     </header>
     <!-- Welcome modal div -->
-    <div id="welcome-modal" class="container">
+    <div id="welcome-container" class="container">
         <div>
             <h2>Welcome!</h2>
             <p>Welcome to this general knowledge quiz.
@@ -27,17 +27,17 @@
 
                 Press 'START' to begin.
             </p>
-            <button type="button" onclick="startQuiz()">START</button>
+            <button id="start-btn" type="button" onclick="startQuiz()">START</button>
         </div>
     </div>
     <!-- Game section -->
     <section>
         <div id="question-container" class="container">
             <h3>Question </h3>
-            <button id="answer-button-one"></button>
-            <button id="answer-button-two"></button>
-            <button id="answer-button-three"></button>
-            <button id="answer-button-four"></button>
+            <button id="answer-btn-one"></button>
+            <button id="answer-btn-two"></button>
+            <button id="answer-btn-three"></button>
+            <button id="answer-btn-four"></button>
             <button type="submit" id="submit-answer-btn" onclick=""></button>
         </div>
     </section>
@@ -45,6 +45,18 @@
     <section>
         <div id="score-display">
             <h3>Score: </h3>
+        </div>
+    </section>
+    <!-- Final Score section -->
+    <section>
+        <div id="final-score-container" class="container">
+            <h2>Final Score:</h2>
+            <!-- Alert to be displayed depending on calculated score -->
+            <h3></h3>
+            <!-- Score out of 10 depending on calculated score -->
+            <h4></h4>
+            <!-- Reset game and play again -->
+            <button id="play-again-btn"></button>
         </div>
     </section>
     <script src="assets/js/script.js"></script>
