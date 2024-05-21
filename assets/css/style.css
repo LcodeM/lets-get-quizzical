@@ -12,25 +12,30 @@ body {
     margin: 0, 5em, 5em, 5em;
     padding: 20px;
     flex-direction: column;
-}
-
-h1, h2 {
     text-align: center;
 }
 
+/* General Div Container styling */
 .container {
     background-color: #7D80DA;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin-bottom: 10px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
     text-align: center;
 }
-
+/* General button styling */
 button {
+    background: #fff;
     padding: 3px;
+    margin: 10px 0;
+    border-radius: 2px;
+}
+
+.answer-btn {
+    width: 100%;
 }
