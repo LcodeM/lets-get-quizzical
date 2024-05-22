@@ -108,14 +108,55 @@ let score = 0;
 /* 
 * Question screen functions
 */
-// Hide questions before quiz start and after quiz finished
-function hideQuestions() {
-
-}
 // Display questions while quiz is active
-function showQuestions() {
-
+//Assign first question from array and starting score of zero, then display question.
+function startQuiz(){
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next"
+    showQuestion();
 }
+
+function showQuestion() {
+    // Set current question to the first question in the 'qeustions' array above.
+    let currentQuestion = questions[currentQuestionIndex];
+    // Ensure question number displays as 1 higher than the initial index (0).
+    let questionNumber = currentQuestionIndex + 1;
+    // Apply text to the question area for each current question.
+    questionElement.innerHTML = "Q" + questionNumber + ": " + currentQuestion.question;
+
+    // Run updateAnswerButtons function for current question.
+    updateAnswerButtons();
+}
+
+/**
+ * Update Answer Button content for every question.
+ */
+function updateAnswerButtons() {
+    // Remove existing or previous question text.
+    const answerButtonsDiv = document.getElementById("answer-buttons");
+    while (answerButtonsDiv.firstChild) {
+        answerButtonsDiv.removeChild(answerButtonsDiv.firstChild)
+    }
+    // Get the current question being displayed
+    let currentQuestion = questions[currentQuestionIndex];
+    // Create new buttons for each of the answers to the current question
+    currentQuestion.answers.forEach((answer, index) => {
+        const newButton = document.createElement("button");
+        // Assign same class name to buttons.
+        newButton.className = "answer-btn";
+        // Assign text from answers to the buttons
+        newButton.textContent = answer.text;
+
+        // Attach the new button to the "answer-buttons" div
+        answerButtonsDiv.appendChild(newButton);
+    });
+}
+
+/*
+* Submit answer 
+*/
+
 
 /* 
 * Welcome screen functions
@@ -132,10 +173,14 @@ window.onload = function() {
 }
 // Hide welcome screen on 'START' button click
 function hideWelcome() {
+    // Change the display of Welcome screen to none
     welcomeContainer.style.display = "none";
 }
 document.getElementById("start-btn").onclick = function() {
+    // Call the hide welcome function on start button click.
     hideWelcome();
+    // Call start quiz function after welcome container hidden.
+    startQuiz();
 };
 
 
