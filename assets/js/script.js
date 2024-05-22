@@ -1,3 +1,5 @@
+
+
 /*
 * Determine Questions Array
 */
@@ -104,14 +106,24 @@ const nextButton = document.getElementById("next-btn");
 /* 
 * Welcome screen functions
 */
-// Hide welcome screen on 'START' button click
-function hideWelcome() {
 
-}
+const welcomeContainer = document.getElementById("welcome-container");
+const startButton = document.getElementById("start-btn");
 // Display welcome screen before game start and when Play Again clicked
 function displayWelcome() {
-    
+    welcomeContainer.style.display = "block"
 }
+
+window.onload = function() {
+    displayWelcome();
+}
+// Hide welcome screen on 'START' button click
+function hideWelcome() {
+    welcomeContainer.style.display = "none";
+}
+document.getElementById("start-btn").onclick = function() {
+    hideWelcome();
+};
 
 /* 
 * Question screen functions

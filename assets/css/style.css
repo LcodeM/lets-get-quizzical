@@ -10,10 +10,11 @@
 
 body {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     min-height: 100vh;
-    margin: 0, 5em, 5em, 5em;
     padding: 20px;
     flex-direction: column;
     font-family: "Chakra Petch", sans-serif;
@@ -50,4 +51,21 @@ button:hover {
 
 .answer-btn {
     width: 100%;
+}
+
+/*
+* Setting initial display for Welcome div modal
+*/
+#welcome-container {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    max-width: 1200px;
+}
+
+/*
+* Setting initial display for Final Score div modal
+*/
+#final-score-container {
+    display: none;
 }
