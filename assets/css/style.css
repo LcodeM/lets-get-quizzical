@@ -69,3 +69,14 @@ button:hover {
 #final-score-container {
     display: none;
 }
+
+/*
+* Correct and incorrect answer button styling
+*/
+.correct-answer {
+    background-color: #3AB795;
+}
+
+.incorrect-answer {
+    background-color: #AC3931;
+}

@@ -100,7 +100,6 @@ const questions = [
  * Determine elements and buttons
  */
 const questionElement = document.getElementById("question");
-
 const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
@@ -150,6 +149,10 @@ function updateAnswerButtons() {
 
         // Attach the new button to the "answer-buttons" div
         answerButtonsDiv.appendChild(newButton);
+        if (answer.correct) {
+            newButton.dataset.correct = answer.correct;
+        }
+        newButton.addEventListener("click", selectAnswer);
     });
 }
 
@@ -157,7 +160,15 @@ function updateAnswerButtons() {
 * Submit answer 
 */
 // onclick event for answer buttons??
-
+function selectAnswer(event) {
+    const selectedButton = event.target;
+    const isCorrect = selectedButton.dataset.correct === "true"
+    if(isCorrect) {
+        selectedButton.classList.add("correct-answer");
+    } else {
+        selectedButton.classList.add("incorrect-answer");
+    }
+};
 
 /* 
 * Welcome screen functions
