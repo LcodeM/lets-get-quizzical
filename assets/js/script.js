@@ -103,10 +103,23 @@ const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
+let currentQuestionIndex = 0;
+let score = 0;
+/* 
+* Question screen functions
+*/
+// Hide questions before quiz start and after quiz finished
+function hideQuestions() {
+
+}
+// Display questions while quiz is active
+function showQuestions() {
+
+}
+
 /* 
 * Welcome screen functions
 */
-
 const welcomeContainer = document.getElementById("welcome-container");
 const startButton = document.getElementById("start-btn");
 // Display welcome screen before game start and when Play Again clicked
@@ -125,17 +138,7 @@ document.getElementById("start-btn").onclick = function() {
     hideWelcome();
 };
 
-/* 
-* Question screen functions
-*/
-// Hide questions before quiz start and after quiz finished
-function hideQuestions() {
 
-}
-// Display questions while quiz is active
-function showQuestions() {
-
-}
 
 /*
 * Final Score screen functions
