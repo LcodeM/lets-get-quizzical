@@ -96,6 +96,33 @@ const questions = [
     }
 ];
 
+/* 
+* Welcome screen functions
+*/
+const welcomeContainer = document.getElementById("welcome-container");
+const startButton = document.getElementById("start-btn");
+// Display welcome screen before game start and when Play Again clicked
+function displayWelcome() {
+    welcomeContainer.style.display = "block"
+}
+
+window.onload = function() {
+    displayWelcome();
+}
+// Hide welcome screen on 'START' button click
+function hideWelcome() {
+    // Change the display of Welcome screen to none
+    welcomeContainer.style.display = "none";
+}
+document.getElementById("start-btn").onclick = function() {
+    // Call the hide welcome function on start button click.
+    hideWelcome();
+    // Call start quiz function after welcome container hidden.
+    startQuiz();
+};
+
+
+
 /**
  * Determine elements and buttons
  */
@@ -159,42 +186,20 @@ function updateAnswerButtons() {
 /*
 * Submit answer 
 */
-// onclick event for answer buttons??
+// Highlight selected answer green/red based on correct/incorrect answer.
+// Highlight correct answer green automatically when incorrect answer selected.
 function selectAnswer(event) {
     const selectedButton = event.target;
-    const isCorrect = selectedButton.dataset.correct === "true"
+    const isCorrect = selectedButton.dataset.correct === "true";
+    // Color highlight depending on answer selected
     if(isCorrect) {
         selectedButton.classList.add("correct-answer");
     } else {
         selectedButton.classList.add("incorrect-answer");
     }
+
+    
 };
-
-/* 
-* Welcome screen functions
-*/
-const welcomeContainer = document.getElementById("welcome-container");
-const startButton = document.getElementById("start-btn");
-// Display welcome screen before game start and when Play Again clicked
-function displayWelcome() {
-    welcomeContainer.style.display = "block"
-}
-
-window.onload = function() {
-    displayWelcome();
-}
-// Hide welcome screen on 'START' button click
-function hideWelcome() {
-    // Change the display of Welcome screen to none
-    welcomeContainer.style.display = "none";
-}
-document.getElementById("start-btn").onclick = function() {
-    // Call the hide welcome function on start button click.
-    hideWelcome();
-    // Call start quiz function after welcome container hidden.
-    startQuiz();
-};
-
 
 
 /*
