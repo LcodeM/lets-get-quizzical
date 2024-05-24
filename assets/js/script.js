@@ -209,9 +209,10 @@ function selectAnswer(event) {
 /**
  * Next Question function
  */
-function nextQuestion() {
+document.getElementById("next-btn").onclick = function nextQuestion() {
+    let currentQuestion = questions[currentQuestionIndex];
     // Increase question index by 1 each time
-    currentQuestionIndex[0] ++;
+    currentQuestionIndex ++;
     // Set rule that if the question # is longer than the questions index, display final score
     if (currentQuestionIndex >= questions.length) {
         displayFinalScore();
