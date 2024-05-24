@@ -121,8 +121,6 @@ document.getElementById("start-btn").onclick = function() {
     startQuiz();
 };
 
-
-
 /**
  * Determine elements and buttons
  */
@@ -198,18 +196,41 @@ function selectAnswer(event) {
         selectedButton.classList.add("incorrect-answer");
     }
 
-    
+    let answerButtonsDiv = document.getElementById("answer-buttons");
+    Array.from(answerButtonsDiv.children).forEach(button => {
+        if(button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
 };
 
+/**
+ * Next Question function
+ */
+function nextQuestion() {
+    // Increase question index by 1 each time
+    currentQuestionIndex[0] ++;
+    // Set rule that if the question # is longer than the questions index, display final score
+    if (currentQuestionIndex >= questions.length) {
+        displayFinalScore();
+        // Otherwise, show next question.
+    } else {
+        showQuestion();
+    }
+};
 
 /*
 * Final Score screen functions
 */
+// Define elements to target
+const finalScoreContainer = document.getElementById("final-score-container");
 // Hide the final score screen until quiz complete
 function hideFinalScore() {
-
+    window.style.display = "none"
 }
 // Display final score screen when quiz complete
 function displayFinalScore() {
-
+    window.style.display = "block"
 }
