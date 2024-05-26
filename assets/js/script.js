@@ -101,9 +101,12 @@ const questions = [
 */
 const welcomeContainer = document.getElementById("welcome-container");
 const startButton = document.getElementById("start-btn");
+const quizContainer = document.getElementById("quiz-container");
 // Display welcome screen before game start and when Play Again clicked
 function displayWelcome() {
     welcomeContainer.style.display = "block"
+    // Hide quiz container
+    quizContainer.style.display = "none";
 }
 
 window.onload = function() {
@@ -125,7 +128,9 @@ document.getElementById("start-btn").onclick = function() {
  * Determine elements and buttons
  */
 const questionElement = document.getElementById("question");
-const nextButton = document.getElementById("next-btn");
+const nextButton = document.getElementById("next-btn")
+// Disable nextButton (will be targeted by function to enable once question answer selected)
+nextButton.disabled = true;
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -135,9 +140,14 @@ let score = 0;
 // Display questions while quiz is active
 //Assign first question from array and starting score of zero, then display question.
 function startQuiz(){
+    // Display quiz container
+    quizContainer.style.display = "block"
+    // Set current question index and score values to 0
     currentQuestionIndex = 0;
     score = 0;
+    // Apply text value to next button
     nextButton.innerHTML = "Next"
+    // Call function to show next question
     showQuestion();
 }
 
@@ -148,7 +158,8 @@ function showQuestion() {
     let questionNumber = currentQuestionIndex + 1;
     // Apply text to the question area for each current question.
     questionElement.innerHTML = "Q" + questionNumber + ": " + currentQuestion.question;
-
+    // Disable nextButton at the start of each question.
+    nextButton.disabled = true;
     // Run updateAnswerButtons function for current question.
     updateAnswerButtons();
 }
@@ -157,7 +168,7 @@ function showQuestion() {
  * Update Answer Button content for every question.
  */
 function updateAnswerButtons() {
-    // Remove existing or previous question text.
+    // Remove existing/previous question elements to be replaced by new ones.
     const answerButtonsDiv = document.getElementById("answer-buttons");
     while (answerButtonsDiv.firstChild) {
         answerButtonsDiv.removeChild(answerButtonsDiv.firstChild)
@@ -177,15 +188,16 @@ function updateAnswerButtons() {
         if (answer.correct) {
             newButton.dataset.correct = answer.correct;
         }
+        // Add listener to newButton's click, and execute selectAnswer function
         newButton.addEventListener("click", selectAnswer);
     });
 }
 
+
 /*
-* Submit answer 
+* Select answer 
 */
 // Highlight selected answer green/red based on correct/incorrect answer.
-// Highlight correct answer green automatically when incorrect answer selected.
 function selectAnswer(event) {
     const selectedButton = event.target;
     const isCorrect = selectedButton.dataset.correct === "true";
@@ -195,30 +207,39 @@ function selectAnswer(event) {
     } else {
         selectedButton.classList.add("incorrect-answer");
     }
-
+    // Target "answer-buttons" div and check each question answer in the array to be correct/incorrect
     let answerButtonsDiv = document.getElementById("answer-buttons");
     Array.from(answerButtonsDiv.children).forEach(button => {
+        // If answer in array is correct, create a new class for that button called "correct".
         if(button.dataset.correct === "true") {
             button.classList.add("correct");
         }
+        // Disable all buttons.
         button.disabled = true;
     });
-    nextButton.style.display = "block";
+    // Enable next-btn to proceed to next question
+    nextButton.disabled = false;
 };
 
 /**
  * Next Question function
  */
+// Enable the next button to iterate to the next question in the questions array once clicked.
 document.getElementById("next-btn").onclick = function nextQuestion() {
-    let currentQuestion = questions[currentQuestionIndex];
-    // Increase question index by 1 each time
-    currentQuestionIndex ++;
-    // Set rule that if the question # is longer than the questions index, display final score
-    if (currentQuestionIndex >= questions.length) {
-        displayFinalScore();
+    // Define nextButtonDisabled and enable the next button ONLY when the question answer has been selected.
+    let nextButtonDisabled = document.getElementById("next-btn").disabled = false;
+    if (!nextButtonDisabled){
+        nextButtonDisabled = true;
+        let currentQuestion = questions[currentQuestionIndex];
+        // Increase question index by 1 each time
+        currentQuestionIndex ++;
+        // Set rule that if the question # is longer than the questions index, display final score
+        if (currentQuestionIndex >= questions.length) {
+            displayFinalScore();
         // Otherwise, show next question.
-    } else {
-        showQuestion();
+        } else {
+            showQuestion();
+        }
     }
 };
 
@@ -229,9 +250,11 @@ document.getElementById("next-btn").onclick = function nextQuestion() {
 const finalScoreContainer = document.getElementById("final-score-container");
 // Hide the final score screen until quiz complete
 function hideFinalScore() {
-    window.style.display = "none"
+    finalScoreContainer.style.display = "none"
 }
 // Display final score screen when quiz complete
 function displayFinalScore() {
-    window.style.display = "block"
+    finalScoreContainer.style.display = "block";
+    // Hide quiz container
+    quizContainer.style.display = "none"
 }
