@@ -199,12 +199,17 @@ function updateAnswerButtons() {
 */
 // Highlight selected answer green/red based on correct/incorrect answer.
 function selectAnswer(event) {
+    // Assign the selected button as the event target
     const selectedButton = event.target;
+    // Define isCorrect to be the correct answer from the dataset.
     const isCorrect = selectedButton.dataset.correct === "true";
     // Color highlight depending on answer selected
     if(isCorrect) {
+        // If isCorrect = true, assign the class "correct-answer" to target the style in our css
         selectedButton.classList.add("correct-answer");
+        incrementScore();
     } else {
+        // if isCorrect = false, assign the class "incorrect-answer" to target the style in our css
         selectedButton.classList.add("incorrect-answer");
     }
     // Target "answer-buttons" div and check each question answer in the array to be correct/incorrect
@@ -219,7 +224,16 @@ function selectAnswer(event) {
     });
     // Enable next-btn to proceed to next question
     nextButton.disabled = false;
+    incrementScore();
 };
+
+/**
+ * Define increment score function to increase user score on correct answer
+ */
+// Gets the current score from the DOM and increments by 1
+function incrementScore() {
+    let newScore = document.getElementById("score").innerHtml = ++score + "/10";
+}
 
 /**
  * Next Question function
@@ -265,9 +279,10 @@ function displayFinalScore() {
 // Reloads the window to start again from the beginning of the quiz
 // Define playAgain as play-again-btn
 const playAgain = document.getElementById("play-again-btn");
-
+// Add event listener on click of playAgain button to call resetQuiz function
 playAgain.addEventListener("click", resetQuiz);
 // Define the resetQuiz function
 function resetQuiz() {
+    // set the function to reload the page using default javascript function
     window.location.reload();
 }
