@@ -258,3 +258,16 @@ function displayFinalScore() {
     // Hide quiz container
     quizContainer.style.display = "none"
 }
+
+/**
+ * Play Again function
+ */
+// Reloads the window to start again from the beginning of the quiz
+// Define playAgain as play-again-btn
+const playAgain = document.getElementById("play-again-btn");
+
+playAgain.addEventListener("click", resetQuiz);
+// Define the resetQuiz function
+function resetQuiz() {
+    window.location.reload();
+}
