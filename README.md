@@ -1,7 +1,9 @@
 # Let's Get Quizzical
 
 ![LGQ Logo](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/lgq_logo.png)
-[LINK TO LIVE SITE HERE](https://lcodem.github.io/lets-get-quizzical/)
+
+<strong>[LINK TO LIVE SITE HERE](https://lcodem.github.io/lets-get-quizzical/)</strong>
+
 ## Introduction
 
 Let's Get Quizzical is a general knowledge quiz, with a friendly and simple design, aimed at testing the user's knowledge across a variety of topics with questions ranging in difficulty.
@@ -61,6 +63,7 @@ Each section aims to serve a different purpose. The welcome-container acting as 
 
 All content is centered to the middle of the screen, as to prevent the need for scrolling, while still maintaining a good design layout.
 
+
 ### Wireframes
 
 Disclaimer: Please be aware that all links open in the same window, make sure to manually open in a new tab.
@@ -73,14 +76,20 @@ Disclaimer: Please be aware that all links open in the same window, make sure to
 
 The colours used for the site were white, two shades of purple for div backgrounds and element highlights, green and red for correct and incorrect button highlighters respectively, and black for the font colour.
 
+- #FFFFFF was used for the background colour.
+- #7D80DA was used for div background colours.
+- #57467B was used for highlighting and accents.
+- #ЗАВ795 was used to highlight a correct answer.
+- #AC3931 was used to highlight an incorrect answer.
+
 ![Colour Scheme](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/lgq_colour_scheme.png)
 
 #### Typogrophy / Fonts
 
-The font family 'Chakra' was downloaded and used from Google Fonts, as it provides an arcade like feel to the game content. This font was used for all text across the website.
+The font family 'Chakra Petch' was downloaded and used from Google Fonts, as it provides an arcade like feel to the game content. This font was used for all text across the website.
 
-[FONT FAMILY HERE]
-
+![Font Family]()
+[Google Font](https://fonts.google.com/specimen/Chakra+Petch?preview.text=Let%27s%20Get%20Quizzical&query=chakra)
 #### Imagery
 
 
