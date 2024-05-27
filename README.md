@@ -1,10 +1,10 @@
-# Fresh Patch
+# Let's Get Quizzical
 
-
+[ADD IMAGE HERE]
 
 ## Introduction
 
-
+[LINK TO LIVE SITE HERE]
 
 ## User Experience
 
@@ -62,7 +62,7 @@ The font family 'Chakra' was downloaded and used from Google Fonts, as it provid
 
 #### Imagery
 
-There were no images or icons used for this project. 
+
 
 
 ## Features
