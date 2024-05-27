@@ -88,8 +88,9 @@ The colours used for the site were white, two shades of purple for div backgroun
 
 The font family 'Chakra Petch' was downloaded and used from Google Fonts, as it provides an arcade like feel to the game content. This font was used for all text across the website.
 
-![Font Family]()
+![Font Family](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/chakra_petch_font_family.png)
 [Google Font](https://fonts.google.com/specimen/Chakra+Petch?preview.text=Let%27s%20Get%20Quizzical&query=chakra)
+
 #### Imagery
 
 
