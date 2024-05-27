@@ -224,7 +224,6 @@ function selectAnswer(event) {
     });
     // Enable next-btn to proceed to next question
     nextButton.disabled = false;
-    incrementScore();
 };
 
 /**
@@ -232,7 +231,10 @@ function selectAnswer(event) {
  */
 // Gets the current score from the DOM and increments by 1
 function incrementScore() {
-    let newScore = document.getElementById("score").innerHtml = ++score + "/10";
+
+    score++;
+
+    document.getElementById("score").textContent = "Score " + score +"/10";
 }
 
 /**
