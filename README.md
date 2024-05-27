@@ -1,6 +1,6 @@
 # Let's Get Quizzical
 
-![LGQ Logo](documentation/lgq_logo.png)
+![LGQ Logo](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/lgq_logo.png)
 [LINK TO LIVE SITE HERE](https://lcodem.github.io/lets-get-quizzical/)
 ## Introduction
 
@@ -73,7 +73,7 @@ Disclaimer: Please be aware that all links open in the same window, make sure to
 
 The colours used for the site were white, two shades of purple for div backgrounds and element highlights, green and red for correct and incorrect button highlighters respectively, and black for the font colour.
 
-![Colour Scheme]()
+![Colour Scheme](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/lgq_colour_scheme.png)
 
 #### Typogrophy / Fonts
 
