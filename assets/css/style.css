@@ -60,7 +60,13 @@ button:hover {
     display: none;
     z-index: 99;
     position: fixed;
-    max-width: 1200px;
+    /* Margin top and left to center both vertical and horizontal */
+    top: 50%;
+    left: 50%;
+    /* Center within parent element */
+    transform: translate(-50%, -50%);
+    max-width: 1200px; /* Same as the body's max-width */
+    width: auto;
 }
 
 /*
