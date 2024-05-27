@@ -274,6 +274,8 @@ function displayFinalScore() {
     finalScoreContainer.style.display = "block";
     // Hide quiz container
     quizContainer.style.display = "none"
+    document.getElementById("score-display").style.display = "none"
+    document.getElementById('final-score').textContent = "Final Score " + score + "/10";
 }
 
 /**
