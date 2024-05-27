@@ -274,7 +274,9 @@ function displayFinalScore() {
     finalScoreContainer.style.display = "block";
     // Hide quiz container
     quizContainer.style.display = "none"
+    // Hide score display on final score screen
     document.getElementById("score-display").style.display = "none"
+    // Amend text content of final-score to 'score' value
     document.getElementById('final-score').textContent = "Final Score " + score + "/10";
 }
 
