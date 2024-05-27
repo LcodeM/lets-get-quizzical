@@ -207,6 +207,7 @@ function selectAnswer(event) {
     if(isCorrect) {
         // If isCorrect = true, assign the class "correct-answer" to target the style in our css
         selectedButton.classList.add("correct-answer");
+        // if answer is correct, call increment score function to add 1 to score
         incrementScore();
     } else {
         // if isCorrect = false, assign the class "incorrect-answer" to target the style in our css
@@ -231,9 +232,9 @@ function selectAnswer(event) {
  */
 // Gets the current score from the DOM and increments by 1
 function incrementScore() {
-
+    // Increment score by 1
     score++;
-
+    // Target innerHTML of score element with updated score
     document.getElementById("score").textContent = "Score " + score +"/10";
 }
 
