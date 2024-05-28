@@ -138,7 +138,14 @@ JavaScript - used to implement interactivity and functionality, as well as manip
 
 ### Other Tools
 
-
+- [GreatStack](https://www.youtube.com/watch?v=AF6vGYIyV8M) GreatStack on YouTube for video tutorials for pop-up modals and highlighting right/wrong answers
+- [Florin Pop](https://www.youtube.com/watch?v=r_PL0K2fGkY)  Florin Pop on YouTube Create a popup/modal in Javascript tutorial
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) window.onload event support for opening welcome container.
+- [Box Shadow](https://getcssscan.com/css-box-shadow-examples) box-shadow code.
+- [Stack Overflow](https://stackoverflow.com/questions/72843561/when-building-a-quiz-app-in-javascript-how-can-i-one-question-to-the-next) support with iterating over questions array for active question.
+- [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) forEach array instances for questions/answers and[Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Location/reload) location.reload function for reloading the page to reset the game once quiz complete.
+- [SheCodes](https://www.shecodes.io/athena/121718-how-to-use-transform-translate-50-50-to-center-an-element-in-css#:~:text=The%20transform%3A%20translate(%2D50,vertically%20within%20its%20parent%20container)) Welcome container styling support - centre aligning the div.
+- [Phind](http://www.phind.com) Support explaining why my score wasn’t incrementing. Issue was with the textContent not being updated to replace what was already in there, and hadn’t defined the score incrementation properly. Also needed to move the incrementScore function to only call if the selectAnswer was correct within selectAnswer function. 
 
 ## Deployment
 
@@ -163,3 +170,34 @@ To create a local copy of this repository, copy and paste ... into your IDE work
 
 ## Credits
 
+- [GreatStack](https://www.youtube.com/watch?v=AF6vGYIyV8M) GreatStack on YouTube for video tutorials for creating array to iterate over answers and highlighting right/wrong answer.
+Section of code inspired by tutorial:
+'''function selectAnswer(event) {
+    // Assign the selected button as the event target
+    const selectedButton = event.target;
+    // Define isCorrect to be the correct answer from the dataset.
+    const isCorrect = selectedButton.dataset.correct === "true";
+    // Color highlight depending on answer selected
+    if(isCorrect) {
+        // If isCorrect = true, assign the class "correct-answer" to target the style in our css
+        selectedButton.classList.add("correct-answer");
+        // if answer is correct, call increment score function to add 1 to score
+        incrementScore();
+    } else {
+        // if isCorrect = false, assign the class "incorrect-answer" to target the style in our css
+        selectedButton.classList.add("incorrect-answer");
+    }
+    // Target "answer-buttons" div and check each question answer in the array to be correct/incorrect
+    let answerButtonsDiv = document.getElementById("answer-buttons");
+    Array.from(answerButtonsDiv.children).forEach(button => {
+        // If answer in array is correct, create a new class for that button called "correct".
+        if(button.dataset.correct === "true") {
+            button.classList.add("correct");
+        }
+        // Disable all buttons.
+        button.disabled = true;
+    });
+    // Enable next-btn to proceed to next question
+    nextButton.disabled = false;
+};''' 
+- 

@@ -198,6 +198,7 @@ function updateAnswerButtons() {
 * Select answer 
 */
 // Highlight selected answer green/red based on correct/incorrect answer.
+// Code inspiration taken from GreatStack on Youtube. See readme.md for credits.
 function selectAnswer(event) {
     // Assign the selected button as the event target
     const selectedButton = event.target;
