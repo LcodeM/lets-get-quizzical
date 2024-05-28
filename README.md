@@ -125,15 +125,13 @@ Some future features that would be a good addition to the site would be:
 
 ## Technologies
 
-
-
 ### Languages
 
 The list of technologies used for completion of the site are as follows:
 
-- HTML5 - used to write structure and foundation of code for website.
-- CSS - used as styling language for all content and page structure on site.
-JavaScript - used to implement interactivity and functionality, as well as manipulate elements on the site.
+- [![HTML5](https://img.shields.io/badge/HTML-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML) - used to write structure and foundation of code for website.
+- [![CSS](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) - used as styling language for all content and page structure on site.
+- [![JavaScript](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) - used to implement interactivity and functionality, as well as manipulate elements on the site.
 - [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) - used to track changes in code and version control.
 
 ### Other Tools
@@ -145,7 +143,8 @@ JavaScript - used to implement interactivity and functionality, as well as manip
 - [Stack Overflow](https://stackoverflow.com/questions/72843561/when-building-a-quiz-app-in-javascript-how-can-i-one-question-to-the-next) support with iterating over questions array for active question.
 - [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) forEach array instances for questions/answers and[Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Location/reload) location.reload function for reloading the page to reset the game once quiz complete.
 - [SheCodes](https://www.shecodes.io/athena/121718-how-to-use-transform-translate-50-50-to-center-an-element-in-css#:~:text=The%20transform%3A%20translate(%2D50,vertically%20within%20its%20parent%20container)) Welcome container styling support - centre aligning the div.
-- [Phind](http://www.phind.com) Support explaining why my score wasn’t incrementing. Issue was with the textContent not being updated to replace what was already in there, and hadn’t defined the score incrementation properly. Also needed to move the incrementScore function to only call if the selectAnswer was correct within selectAnswer function. 
+- [Phind](http://www.phind.com) Support explaining why my score wasn’t incrementing. Issue was with the textContent not being updated to replace what was already in there, and hadn’t defined the score incrementation properly. Also needed to move the incrementScore function to only call if the selectAnswer was correct within selectAnswer function.
+- [Balsamiq](https://balsamiq.com/wireframes/desktop/#) for wireframe creation.
 
 ## Deployment
 
@@ -155,18 +154,18 @@ Let's Get Quizzical was developed in VS Code and deployed to GitHub pages.
 
 The steps to deploy are:
 
-- Navigate to the GitHub repository, or click ...
+- Navigate to the GitHub repository, or click [here](https://github.com/LcodeM/lets-get-quizzical/tree/main).
 - Go to the 'Settings' tab and then to Pages on the left-hand side.
 - From the Source section, select Branch 'main' from the dropdown menu, and make sure '/(root)' is selected next to it. Then click 'Save'.
 - Once complete, you will see a message at the top of the page, and a link to the deployed site will be published (this may take a moment).
 
-You can find the link to the live version ...
+You can find the link to the live version [here](https://lcodem.github.io/lets-get-quizzical/).
 
-To create a local copy of this repository, copy and paste ... into your IDE workspace, or use "git clone ... in your terminal.
+To create a local copy of this repository, copy and paste https://github.com/LcodeM/lets-get-quizzical.git into your IDE workspace, or use "git clone https://github.com/LcodeM/lets-get-quizzical.git" in your terminal.
 
 ## Testing
 
-
+See [TESTING.md](https://github.com/LcodeM/lets-get-quizzical/blob/main/TESTING.md).
 
 ## Credits
 
@@ -200,4 +199,4 @@ Section of code inspired by tutorial:
     // Enable next-btn to proceed to next question
     nextButton.disabled = false;
 };''' 
-- 
+- [Alex Crabbe](https://github.com/alexrobincrabbe) for his time and support in helping me troubleshoot issues with my code related to the nextQuestion function and disabling the 'next' button inside question-container.
