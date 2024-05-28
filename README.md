@@ -93,7 +93,7 @@ The font family 'Chakra Petch' was downloaded and used from Google Fonts, as it 
 
 #### Imagery
 
-The only images used for this project was the favicon 'Alien Monster'. 
+The only images used for this project were the favicons 'Alien Monster'. 
 ![Alien Monster](https://github.com/LcodeM/lets-get-quizzical/blob/main/android-chrome-192x192.png)
 
 ## Features
@@ -102,8 +102,15 @@ The only images used for this project was the favicon 'Alien Monster'.
 
 #### Navigation
 
+Navigation on the site is controlled using JavaScript and event listeners on buttons:
 
-#### Home Page
+- Users gain access to the quiz questions upon clicking the 'start' button in the welcome screen (which is displayed on window.load). This ensures that players have been presented with the games instructions prior to beginning the quiz. This is essential, as users need to understand that their questions are locked in upon selection, and no other answers will be available to choose unless they play again. 
+
+- Once questions are displayed, users are required to choose an answer before the 'next' button is enabled, allowing them to continue. 
+
+- Users must answer all 10 questions in order to access the 'final score' screen, upon which they have the opportunity to 'play again', reloading the page to the welcome screen. 
+
+#### Welcome Container
 
 
 
@@ -111,9 +118,14 @@ The only images used for this project was the favicon 'Alien Monster'.
 
 Some future features that would be a good addition to the site would be:
 
+- Various different categories and a larger list of questions, which vary in difficulty.
+- A timer, depending on the degree of difficulty, that users have to answer all questions.
+- A leaderboard feature to store user scores and display highest.
+- A more advanced interface.
+
+## Technologies
 
 
-## Techonologies
 
 ### Languages
 
@@ -122,7 +134,7 @@ The list of technologies used for completion of the site are as follows:
 - HTML5 - used to write structure and foundation of code for website.
 - CSS - used as styling language for all content and page structure on site.
 JavaScript - used to implement interactivity and functionality, as well as manipulate elements on the site.
-- Git - used to track changes in code and version control.
+- [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) - used to track changes in code and version control.
 
 ### Other Tools
 
