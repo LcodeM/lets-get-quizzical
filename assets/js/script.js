@@ -108,7 +108,7 @@ function displayWelcome() {
     // Hide quiz container
     quizContainer.style.display = "none";
 }
-
+// Code inspired by MDN Web Docs. See references in readme.
 window.onload = function() {
     displayWelcome();
 }
