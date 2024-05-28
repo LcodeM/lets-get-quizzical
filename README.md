@@ -94,7 +94,7 @@ The font family 'Chakra Petch' was downloaded and used from Google Fonts, as it 
 #### Imagery
 
 The only images used for this project was the favicon 'Alien Monster'. 
-
+![Alien Monster](https://github.com/LcodeM/lets-get-quizzical/blob/main/android-chrome-192x192.png)
 
 ## Features
 
