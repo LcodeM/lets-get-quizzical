@@ -136,29 +136,27 @@ The start button is used with on click event that hides the welcome container an
 
 #### Question Container
 
-![Question Container]()
+![Question Container](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/next_button_disabled.png)
 
 The question container, once displayed, is the main content area for the quiz. It holds an array of questions which are iterated through using javascript, as well as the next button, which is disabled until the user has selected an answer. 
 
-There is also a function that displays whether the user has selected the correct/incorrect answer, which will turn the background of their selected button gree or red, respectively. 
+There is also a function that displays whether the user has selected the correct/incorrect answer, which will turn the background of their selected button gree or red, respectively.
 
-![Next button]()
+![Correct answer](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/correct_answer_highlighted.png)
 
-![Correct answer]()
-
-![Incorrect answer]()
+![Incorrect answer](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/incorrect_answer_highlighted.png)
 
 #### Final Score Container
 
-![Final score container]()
+![Final score container](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/final_score_container.png)
 
 The final score container is displayed, once again, using a function that checks to see if the current question is greater than or equal to the length of the questions array. Once this is true, upon clicking next for a final time, the final score container is displayed to the user, calculated using the score function which increments the users score based on selecting a correct answer for each question. 
 
-![Score]()
-
 #### Score Display
 
+![Score](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/score_display.png)
 
+The score display uses a function that increments the user's score by 1 with each correct answer, and displays it below the question container as a score out of (/) 10.
 
 ### Future Features and Improvements to be Implemented
 
