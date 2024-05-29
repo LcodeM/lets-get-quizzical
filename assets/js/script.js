@@ -164,7 +164,7 @@ function startQuiz() {
   nextButton.innerHTML = "Next";
   // Call function to show next question
   showQuestion();
-}
+};
 
 
 /**
@@ -182,7 +182,7 @@ function showQuestion() {
   nextButton.disabled = true;
   // Run updateAnswerButtons function for current question.
   updateAnswerButtons();
-}
+};
 
 
 /**
@@ -211,7 +211,7 @@ function updateAnswerButtons() {
     // Add listener to newButton's click, and execute selectAnswer function
     newButton.addEventListener("click", selectAnswer);
   });
-}
+};
 
 
 /*
@@ -244,7 +244,7 @@ function selectAnswer(event) {
   });
   // Enable next-btn to proceed to next question
   nextButton.disabled = false;
-}
+};
 
 
 /**
@@ -255,7 +255,7 @@ function incrementScore() {
   score++;
   // Target innerHTML of score element with updated score
   document.getElementById("score").textContent = "Score " + score + "/10";
-}
+};
 
 
 /**
@@ -263,9 +263,7 @@ function incrementScore() {
  */
 document.getElementById("next-btn").onclick = function nextQuestion() {
   // Define nextButtonDisabled and enable the next button ONLY when the question answer has been selected.
-  let nextButtonDisabled = (document.getElementById(
-    "next-btn"
-  ).disabled = false);
+  let nextButtonDisabled = (document.getElementById("next-btn").disabled = false);
   if (!nextButtonDisabled) {
     nextButtonDisabled = true;
     // Increase question index by 1 each time
@@ -277,7 +275,7 @@ document.getElementById("next-btn").onclick = function nextQuestion() {
     } else {
       showQuestion();
     }
-  }
+  };
 };
 
 
@@ -295,7 +293,7 @@ function displayFinalScore() {
   // Amend text content of final-score to 'score' value
   document.getElementById("final-score").textContent =
     "Final Score " + score + "/10";
-}
+};
 
 
 /**
@@ -308,4 +306,4 @@ playAgain.addEventListener("click", resetQuiz);
 function resetQuiz() {
   // set the function to reload the page to begin quiz again
   window.location.reload();
-}
+};
