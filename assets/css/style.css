@@ -94,7 +94,7 @@ footer {
 * Correct and incorrect answer button styling
 */
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 320px) {
     .correct-answer {
         background-color: #3AB795;
     }
