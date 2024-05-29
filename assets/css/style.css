@@ -75,11 +75,11 @@ button:hover {
 
 @media screen and (min-width: 375px) {
     .correct-answer:active {
-        background-color: #3AB795;
+        -webkit-tap-highlight-color: #3AB795;
     }
 
     .incorrect-answer:active {
-        background-color: #AC3931;
+        -webkit-tap-highlight-color: #AC3931;
     }
 }
 
