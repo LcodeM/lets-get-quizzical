@@ -12,6 +12,8 @@ The game is designed to display whether the user has chosen a correct or incorre
 
 Users should enjoy the different question topics, and aim to want to beat their previous score, where possible.
 
+![Responsive Windows]()
+
 ## User Experience
 
 ### Project Goal
@@ -62,7 +64,6 @@ Let's Get Quizzical utilises a single index.html page, which in turn utilises ja
 Each section aims to serve a different purpose. The welcome-container acting as the introdcution to the game, and how to play it. The quiz-container, which is hidden upon the page load, holds the questions, and is the main visible element of the site until all questions are answered. Finally, the final-score-container is displayed only when all questions have been answered, displaying the user's final score, as well as the 'Play Again' button which refreshes the page and starts again from the welcome-container.
 
 All content is centered to the middle of the screen, as to prevent the need for scrolling, while still maintaining a good design layout.
-
 
 ### Wireframes
 

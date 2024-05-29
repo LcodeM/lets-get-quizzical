@@ -104,19 +104,19 @@ const startButton = document.getElementById("start-btn");
 const quizContainer = document.getElementById("quiz-container");
 // Display welcome screen before game start and when Play Again clicked
 function displayWelcome() {
-    welcomeContainer.style.display = "block"
+    welcomeContainer.style.display = "block";
     // Hide quiz container
     quizContainer.style.display = "none";
 }
 // Code inspired by MDN Web Docs. See references in readme.
 window.onload = function() {
     displayWelcome();
-}
+};
 // Hide welcome screen on 'START' button click
 function hideWelcome() {
     // Change the display of Welcome screen to none
     welcomeContainer.style.display = "none";
-}
+};
 document.getElementById("start-btn").onclick = function() {
     // Call the hide welcome function on start button click.
     hideWelcome();
@@ -128,7 +128,7 @@ document.getElementById("start-btn").onclick = function() {
  * Determine elements and buttons
  */
 const questionElement = document.getElementById("question");
-const nextButton = document.getElementById("next-btn")
+const nextButton = document.getElementById("next-btn");
 // Disable nextButton (will be targeted by function to enable once question answer selected)
 nextButton.disabled = true;
 
@@ -141,12 +141,12 @@ let score = 0;
 //Assign first question from array and starting score of zero, then display question.
 function startQuiz(){
     // Display quiz container
-    quizContainer.style.display = "block"
+    quizContainer.style.display = "block";
     // Set current question index and score values to 0
     currentQuestionIndex = 0;
     score = 0;
     // Apply text value to next button
-    nextButton.innerHTML = "Next"
+    nextButton.innerHTML = "Next";
     // Call function to show next question
     showQuestion();
 }
@@ -162,7 +162,7 @@ function showQuestion() {
     nextButton.disabled = true;
     // Run updateAnswerButtons function for current question.
     updateAnswerButtons();
-}
+};
 
 /**
  * Update Answer Button content for every question.
@@ -171,8 +171,8 @@ function updateAnswerButtons() {
     // Remove existing/previous question elements to be replaced by new ones.
     const answerButtonsDiv = document.getElementById("answer-buttons");
     while (answerButtonsDiv.firstChild) {
-        answerButtonsDiv.removeChild(answerButtonsDiv.firstChild)
-    }
+        answerButtonsDiv.removeChild(answerButtonsDiv.firstChild);
+    };
     // Get the current question being displayed
     let currentQuestion = questions[currentQuestionIndex];
     // Create new buttons for each of the answers to the current question
@@ -268,15 +268,15 @@ document.getElementById("next-btn").onclick = function nextQuestion() {
 const finalScoreContainer = document.getElementById("final-score-container");
 // Hide the final score screen until quiz complete
 function hideFinalScore() {
-    finalScoreContainer.style.display = "none"
+    finalScoreContainer.style.display = "none";
 }
 // Display final score screen when quiz complete
 function displayFinalScore() {
     finalScoreContainer.style.display = "block";
     // Hide quiz container
-    quizContainer.style.display = "none"
+    quizContainer.style.display = "none";
     // Hide score display on final score screen
-    document.getElementById("score-display").style.display = "none"
+    document.getElementById("score-display").style.display = "none";
     // Amend text content of final-score to 'score' value
     document.getElementById('final-score').textContent = "Final Score " + score + "/10";
 }
