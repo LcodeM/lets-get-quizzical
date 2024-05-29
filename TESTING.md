@@ -4,11 +4,13 @@
 
 All pages have been tested for compatability in different browsers, including Google Chrome (default browser), Safari and Mozilla Firefox.
 
-![Browser Compatability](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/responsive_design.gif)
+![Browser Compatability](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/browser_compatability.png)
 
 ## Responsiveness
 
+![Device responsiveness](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/responsive_design.gif)
 
+The page, features and functions all responded well across multiple devices in regard to design and functionality.
 
 ## Manual Testing
 
