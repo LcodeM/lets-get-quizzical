@@ -74,10 +74,12 @@ button:hover {
 */
 .correct-answer {
     background-color: #3AB795;
+    -webkit-tap-highlight-color: #3AB795;
 }
 
 .incorrect-answer {
     background-color: #AC3931;
+    -webkit-tap-highlight-color: #AC3931;
 }
 
 @media screen and (min-width: 768px) {
