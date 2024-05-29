@@ -46,7 +46,7 @@ button {
 }
 
 button:hover {
-    border-color: #ddd;
+    border: 2px solid #ddd;
 }
 
 .answer-btn {
