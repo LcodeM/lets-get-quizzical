@@ -46,7 +46,7 @@ button {
 }
 
 button:hover {
-    background: #ddd;
+    border-color: #ddd;
 }
 
 .answer-btn {
@@ -80,6 +80,7 @@ button:hover {
 
     .incorrect-answer:active {
         -webkit-tap-highlight-color: #AC3931;
+        
     }
 }
 
