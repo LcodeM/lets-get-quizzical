@@ -2,7 +2,9 @@
 
 ## Compatability
 
+All pages have been tested for compatability in different browsers, including Google Chrome (default browser), Safari and Mozilla Firefox.
 
+![Browser Compatability]()
 
 ## Responsiveness
 
