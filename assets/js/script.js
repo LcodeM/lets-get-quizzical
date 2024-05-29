@@ -166,7 +166,7 @@ function showQuestion() {
   let questionNumber = currentQuestionIndex + 1;
   // Apply text to the question area for each current question.
   questionElement.innerHTML =
-    "Q" + questionNumber + ": " + currentQuestion.question;
+    "Q" + questionNumber + " of 10: " + currentQuestion.question;
   // Disable nextButton at the start of each question.
   nextButton.disabled = true;
   // Run updateAnswerButtons function for current question.
