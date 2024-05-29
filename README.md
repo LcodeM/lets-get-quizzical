@@ -12,7 +12,7 @@ The game is designed to display whether the user has chosen a correct or incorre
 
 Users should enjoy the different question topics, and aim to want to beat their previous score, where possible.
 
-![Responsive Windows]()
+![Responsive Windows](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/amiresponsive_all_screens.png)
 
 ## User Experience
 
@@ -65,11 +65,23 @@ Each section aims to serve a different purpose. The welcome-container acting as 
 
 All content is centered to the middle of the screen, as to prevent the need for scrolling, while still maintaining a good design layout.
 
+![Index Main Page]()
+
 ### Wireframes
 
 Disclaimer: Please be aware that all links open in the same window, make sure to manually open in a new tab.
 
+#### Mobile
 
+![Mobile wireframes]()
+
+#### Tablet
+
+![Tablet wireframes]()
+
+#### Desktop
+
+![Desktop wireframes]()
 
 ### Design
 
@@ -116,11 +128,15 @@ Navigation on the site is controlled using JavaScript and event listeners on but
 
 
 
-#### Welcome Container
+#### Question Container
 
 
 
-#### Welcome Container
+#### Final Score Container
+
+
+
+#### Score Display
 
 
 
