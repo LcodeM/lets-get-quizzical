@@ -65,7 +65,7 @@ Each section aims to serve a different purpose. The welcome-container acting as 
 
 All content is centered to the middle of the screen, as to prevent the need for scrolling, while still maintaining a good design layout.
 
-![Index Main Page]()
+![Index Main Page](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/index_main_page.png)
 
 ### Wireframes
 
@@ -73,15 +73,15 @@ Disclaimer: Please be aware that all links open in the same window, make sure to
 
 #### Mobile
 
-![Mobile wireframes]()
+![Mobile wireframes](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/mobile_wireframes.png)
 
 #### Tablet
 
-![Tablet wireframes]()
+![Tablet wireframes](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/tablet_wireframes.png)
 
 #### Desktop
 
-![Desktop wireframes]()
+![Desktop wireframes](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/dektop_wireframes2.png)
 
 ### Design
 
