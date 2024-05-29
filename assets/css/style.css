@@ -58,8 +58,8 @@ button:hover {
 */
 #welcome-container {
     display: none;
-    z-index: 99;
     position: fixed;
+    margin: 10px;
 }
 
 /*
