@@ -187,6 +187,11 @@ The list of technologies used for completion of the site are as follows:
 - [Florin Pop](https://www.youtube.com/watch?v=r_PL0K2fGkY)  Florin Pop on YouTube Create a popup/modal in Javascript tutorial
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) window.onload event support for opening welcome container.
 - [Box Shadow](https://getcssscan.com/css-box-shadow-examples) box-shadow code.
+```css
+.container {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+};
+```
 - [Stack Overflow](https://stackoverflow.com/questions/72843561/when-building-a-quiz-app-in-javascript-how-can-i-one-question-to-the-next) support with iterating over questions array for active question.
 - [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) forEach array instances for questions/answers and[Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Location/reload) location.reload function for reloading the page to reset the game once quiz complete.
 - [SheCodes](https://www.shecodes.io/athena/121718-how-to-use-transform-translate-50-50-to-center-an-element-in-css#:~:text=The%20transform%3A%20translate(%2D50,vertically%20within%20its%20parent%20container)) Welcome container styling support - centre aligning the div.
@@ -246,6 +251,12 @@ function selectAnswer(event) {
     });
     // Enable next-btn to proceed to next question
     nextButton.disabled = false;
+};
+```
+- [Box Shadow](https://getcssscan.com/css-box-shadow-examples) box-shadow code.
+```css
+.container {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
 };
 ```
 - [Alex Crabbe](https://github.com/alexrobincrabbe) for his time and support in helping me troubleshoot issues with my code related to the nextQuestion function and disabling the 'next' button inside question-container.
