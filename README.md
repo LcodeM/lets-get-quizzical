@@ -126,15 +126,35 @@ Navigation on the site is controlled using JavaScript and event listeners on but
 
 #### Welcome Container
 
+![Welcome Container](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/welcome_container.png)
 
+The welcome container is opened by javascript upon window load, which provides the user with instructions on how to play the game, and a start button to begin. 
+
+![Start button](https://github.com/LcodeM/lets-get-quizzical/blob/main/documentation/start_button.png)
+
+The start button is used with on click event that hides the welcome container and displays the question container.
 
 #### Question Container
 
+![Question Container]()
 
+The question container, once displayed, is the main content area for the quiz. It holds an array of questions which are iterated through using javascript, as well as the next button, which is disabled until the user has selected an answer. 
+
+There is also a function that displays whether the user has selected the correct/incorrect answer, which will turn the background of their selected button gree or red, respectively. 
+
+![Next button]()
+
+![Correct answer]()
+
+![Incorrect answer]()
 
 #### Final Score Container
 
+![Final score container]()
 
+The final score container is displayed, once again, using a function that checks to see if the current question is greater than or equal to the length of the questions array. Once this is true, upon clicking next for a final time, the final score container is displayed to the user, calculated using the score function which increments the users score based on selecting a correct answer for each question. 
+
+![Score]()
 
 #### Score Display
 
@@ -146,6 +166,7 @@ Some future features that would be a good addition to the site would be:
 
 - Various different categories and a larger list of questions, which vary in difficulty.
 - A timer, depending on the degree of difficulty, that users have to answer all questions.
+- Different alerts or final score messages depending on the score range.
 - A leaderboard feature to store user scores and display highest.
 - A more advanced interface.
 
