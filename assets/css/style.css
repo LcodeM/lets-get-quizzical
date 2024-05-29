@@ -72,14 +72,15 @@ button:hover {
 /*
 * Correct and incorrect answer button styling
 */
-.correct-answer {
-    background-color: #3AB795;
-    -webkit-tap-highlight-color: #3AB795;
-}
 
-.incorrect-answer {
-    background-color: #AC3931;
-    -webkit-tap-highlight-color: #AC3931;
+@media screen and (min-width: 375px) {
+    .correct-answer:active {
+        background-color: #3AB795;
+    }
+
+    .incorrect-answer:active {
+        background-color: #AC3931;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -92,5 +93,13 @@ button:hover {
     /* Same as the body's max-width */
     max-width: 1200px;
     width: auto;
+    }
+
+    .correct-answer {
+        background-color: #3AB795;
+    }
+    
+    .incorrect-answer {
+        background-color: #AC3931;
     }
 }
