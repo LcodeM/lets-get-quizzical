@@ -197,6 +197,7 @@ The list of technologies used for completion of the site are as follows:
 - [SheCodes](https://www.shecodes.io/athena/121718-how-to-use-transform-translate-50-50-to-center-an-element-in-css#:~:text=The%20transform%3A%20translate(%2D50,vertically%20within%20its%20parent%20container)) Welcome container styling support - centre aligning the div.
 - [Phind](http://www.phind.com) Support explaining why my score wasn’t incrementing. Issue was with the textContent not being updated to replace what was already in there, and hadn’t defined the score incrementation properly. Also needed to move the incrementScore function to only call if the selectAnswer was correct within selectAnswer function.
 - [Balsamiq](https://balsamiq.com/wireframes/desktop/#) for wireframe creation.
+- [CSV to markdown](https://www.convertcsv.com/csv-to-markdown.htm) for converting csv file content into markdown table.
 
 ## Deployment
 
