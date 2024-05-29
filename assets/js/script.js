@@ -105,11 +105,14 @@ const questions = [
  */
 const welcomeContainer = document.getElementById("welcome-container");
 const quizContainer = document.getElementById("quiz-container");
+const scoreDisplay = document.getElementById("score-display");
 // Display welcome screen before game start and when Play Again clicked
 function displayWelcome() {
   welcomeContainer.style.display = "block";
   // Hide quiz container
   quizContainer.style.display = "none";
+  // Hide score display
+  scoreDisplay.style.display = "none";
 }
 // Code inspired by MDN Web Docs. See references in readme.
 window.onload = function () {
@@ -145,6 +148,8 @@ let score = 0;
 function startQuiz() {
   // Display quiz container
   quizContainer.style.display = "block";
+  // Display scoreDisplay
+  scoreDisplay.style.display = "block";
   // Set current question index and score values to 0
   currentQuestionIndex = 0;
   score = 0;
