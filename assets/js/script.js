@@ -100,6 +100,7 @@ const questions = [
   },
 ];
 
+
 /*
  * Welcome screen functions
  */
@@ -113,22 +114,29 @@ function displayWelcome() {
   quizContainer.style.display = "none";
   // Hide score display
   scoreDisplay.style.display = "none";
-}
+};
+
+
 // Code inspired by MDN Web Docs. See references in readme.
 window.onload = function () {
   displayWelcome();
 };
+
+
 // Hide welcome screen on 'START' button click
 function hideWelcome() {
   // Change the display of Welcome screen to none
   welcomeContainer.style.display = "none";
-}
+};
+
+
 document.getElementById("start-btn").onclick = function () {
   // Call the hide welcome function on start button click.
   hideWelcome();
   // Call start quiz function after welcome container hidden.
   startQuiz();
 };
+
 
 /**
  * Determine elements and buttons
@@ -137,14 +145,13 @@ const questionElement = document.getElementById("question");
 const nextButton = document.getElementById("next-btn");
 // Disable nextButton (will be targeted by function to enable once question answer selected)
 nextButton.disabled = true;
-
 let currentQuestionIndex = 0;
 let score = 0;
+
+
 /*
  * Question screen functions
  */
-// Display questions while quiz is active
-//Assign first question from array and starting score of zero, then display question.
 function startQuiz() {
   // Display quiz container
   quizContainer.style.display = "block";
@@ -159,6 +166,10 @@ function startQuiz() {
   showQuestion();
 }
 
+
+/**
+ *  Show Question function
+ */
 function showQuestion() {
   // Set current question to the first question in the 'qeustions' array above.
   let currentQuestion = questions[currentQuestionIndex];
@@ -172,6 +183,7 @@ function showQuestion() {
   // Run updateAnswerButtons function for current question.
   updateAnswerButtons();
 }
+
 
 /**
  * Update Answer Button content for every question.
@@ -191,7 +203,6 @@ function updateAnswerButtons() {
     newButton.className = "answer-btn";
     // Assign text from answers to the buttons
     newButton.textContent = answer.text;
-
     // Attach the new button to the "answer-buttons" div
     answerButtonsDiv.appendChild(newButton);
     if (answer.correct) {
@@ -202,11 +213,10 @@ function updateAnswerButtons() {
   });
 }
 
+
 /*
  * Select answer
  */
-// Highlight selected answer green/red based on correct/incorrect answer.
-// Code inspiration taken from GreatStack on Youtube. See readme.md for credits.
 function selectAnswer(event) {
   // Assign the selected button as the event target
   const selectedButton = event.target;
@@ -236,10 +246,10 @@ function selectAnswer(event) {
   nextButton.disabled = false;
 }
 
+
 /**
  * Define increment score function to increase user score on correct answer
  */
-// Gets the current score from the DOM and increments by 1
 function incrementScore() {
   // Increment score by 1
   score++;
@@ -247,10 +257,10 @@ function incrementScore() {
   document.getElementById("score").textContent = "Score " + score + "/10";
 }
 
+
 /**
  * Next Question function
  */
-// Enable the next button to iterate to the next question in the questions array once clicked.
 document.getElementById("next-btn").onclick = function nextQuestion() {
   // Define nextButtonDisabled and enable the next button ONLY when the question answer has been selected.
   let nextButtonDisabled = (document.getElementById(
@@ -270,12 +280,11 @@ document.getElementById("next-btn").onclick = function nextQuestion() {
   }
 };
 
+
 /*
  * Final Score screen functions
  */
-// Define elements to target
 const finalScoreContainer = document.getElementById("final-score-container");
-
 // Display final score screen when quiz complete
 function displayFinalScore() {
   finalScoreContainer.style.display = "block";
@@ -288,16 +297,15 @@ function displayFinalScore() {
     "Final Score " + score + "/10";
 }
 
+
 /**
  * Play Again function
  */
-// Reloads the window to start again from the beginning of the quiz
-// Define playAgain as play-again-btn
 const playAgain = document.getElementById("play-again-btn");
 // Add event listener on click of playAgain button to call resetQuiz function
 playAgain.addEventListener("click", resetQuiz);
 // Define the resetQuiz function
 function resetQuiz() {
-  // set the function to reload the page using default javascript function
+  // set the function to reload the page to begin quiz again
   window.location.reload();
 }
