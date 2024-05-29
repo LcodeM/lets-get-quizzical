@@ -90,7 +90,7 @@ finalScoreContainer.style.display = “block”;
 
 ### Unsolved/Ongoing Bugs
 
-
+No unresolved bugs to report.
 
 ## Mistakes
 
