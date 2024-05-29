@@ -96,7 +96,7 @@ The font family 'Chakra Petch' was downloaded and used from Google Fonts, as it 
 
 The only images used for this project were the favicons 'Alien Monster'.
 
-![Alien Monster](https://github.com/LcodeM/lets-get-quizzical/blob/main/android-chrome-192x192.png)
+![Alien Monster](https://github.com/LcodeM/lets-get-quizzical/blob/main/assets/favicon/favicon-16x16.png)
 
 ## Features
 
@@ -146,6 +146,8 @@ The list of technologies used for completion of the site are as follows:
 
 ### Other Tools
 
+- [Github](https://github.com/LcodeM/lets-get-quizzical) Used as repository host.
+- [VSCode](https://code.visualstudio.com/) used to set up workspaces and main tool for writing/editing of code.
 - [GreatStack](https://www.youtube.com/watch?v=AF6vGYIyV8M) GreatStack on YouTube for video tutorials for pop-up modals and highlighting right/wrong answers
 - [Florin Pop](https://www.youtube.com/watch?v=r_PL0K2fGkY)  Florin Pop on YouTube Create a popup/modal in Javascript tutorial
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) window.onload event support for opening welcome container.
@@ -181,7 +183,8 @@ See [TESTING.md](https://github.com/LcodeM/lets-get-quizzical/blob/main/TESTING.
 
 - [GreatStack](https://www.youtube.com/watch?v=AF6vGYIyV8M) GreatStack on YouTube for video tutorials for creating array to iterate over answers and highlighting right/wrong answer.
 Section of code inspired by tutorial:
-'''function selectAnswer(event) {
+```js
+function selectAnswer(event) {
     // Assign the selected button as the event target
     const selectedButton = event.target;
     // Define isCorrect to be the correct answer from the dataset.
@@ -208,5 +211,6 @@ Section of code inspired by tutorial:
     });
     // Enable next-btn to proceed to next question
     nextButton.disabled = false;
-};''' 
+};
+```
 - [Alex Crabbe](https://github.com/alexrobincrabbe) for his time and support in helping me troubleshoot issues with my code related to the nextQuestion function and disabling the 'next' button inside question-container.
